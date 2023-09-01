@@ -43,6 +43,10 @@ img {
   padding: 5px;
 }
 
+.user-profile {
+  cursor: pointer;
+}
+
 .user-profile img {
   width: 50px;
   border-radius: 50%;
@@ -86,6 +90,7 @@ img {
 .alert-text > span:nth-child(2) {
   text-decoration: underline;
   color: gray;
+  cursor: pointer;
 }
 
 .chat-list__input {
@@ -113,6 +118,7 @@ img {
   align-items: center;
 
   position: relative;
+  cursor: pointer;
 }
 
 .chat-preview > .msg-time {
@@ -152,6 +158,8 @@ img {
 .active-user-profile {
   display: flex;
   align-items: center;
+
+  cursor: pointer;
 }
 
 .active-user-controls {
@@ -162,6 +170,7 @@ img {
 .active-user-controls span {
   color: gray;
   padding: 5px;
+  cursor: pointer;
 }
 
 .active-chat__header img {
