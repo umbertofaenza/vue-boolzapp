@@ -1,3 +1,12 @@
+/* # RESET */
+
+img {
+  max-width: 100%;
+}
+
+/* # SECTIONS */
+
+/* Generals */
 .wrapper {
   width: 100%;
   height: 100vh;
@@ -8,7 +17,6 @@
 .app-container {
   width: 100%;
   height: calc(100vh - 40px);
-  border: 1px solid black;
   background-color: lightgray;
 }
 
@@ -19,33 +27,109 @@
   display: flex;
 }
 
+/* Chat List */
 .chat-list {
-  width: 30%;
+  width: 35%;
   height: 100%;
-  border: 1px solid red;
 }
 
 .chat-list__header {
   height: 10%;
-  background-color: lightblue;
+  background-color: #eaeaea;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.user-profile img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.user-controls span {
+  padding: 0 5px;
+  color: gray;
+  cursor: pointer;
 }
 
 .chat-list__alert {
-  height: 10%;
-  background-color: lightcoral;
+  height: 8%;
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  background-color: #8edafc;
+}
+
+.alert-icon {
+  background-color: white;
+  width: 40px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #8edafc;
+}
+
+.alert-text > span {
+  display: block;
+  margin-left: 5px;
+  font-size: 0.85rem;
+}
+
+.alert-text > span:nth-child(2) {
+  text-decoration: underline;
+  color: gray;
 }
 
 .chat-list__input {
-  height: 10%;
+  height: 7%;
+  padding: 5px;
+  background-color: #fafafa;
+
+  display: flex;
+  align-items: center;
 }
 
 .chat-list__chats {
-  height: 70%;
-  background-color: lightgreen;
+  height: 75%;
+  background-color: #fff;
+
+  overflow: scroll;
 }
 
+.chat-preview {
+  height: 70px;
+  padding: 5px;
+  border-bottom: 1px solid rgb(235, 232, 232);
+
+  display: flex;
+  align-items: center;
+}
+
+.chat-preview img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.chat-preview__text span {
+  display: block;
+}
+
+.preview-message {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+/* Active Chat */
 .active-chat {
-  width: 70%;
+  width: 65%;
   height: 100%;
   border: 1px solid yellow;
 }
