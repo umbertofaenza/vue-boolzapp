@@ -111,6 +111,12 @@ img {
 
   display: flex;
   align-items: center;
+
+  position: relative;
+}
+
+.chat-preview > .msg-time {
+  top: 5px;
 }
 
 .chat-preview img {
