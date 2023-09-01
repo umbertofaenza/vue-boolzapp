@@ -3,7 +3,11 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      message: "Hello Vue!",
+      contacts,
     };
+  },
+
+  created() {
+    console.log(this.contacts);
   },
 }).mount("#app");

@@ -70,14 +70,14 @@
                         <!-- chats -->
                         <div class="chat-list__chats">
                             <!-- chat preview -->
-                            <div class="chat-preview">
+                            <div v-for="(contact, index) in contacts" class="chat-preview">
                                 <!-- preview img -->
                                 <div class="chat-preview__img">
-                                    <img src="./img/avatar_1.jpg">
+                                    <img :src="contact.avatar">
                                 </div>
                                 <!-- preview text -->
                                 <div class="chat-preview__text">
-                                    <span class="preview-name">Michele</span>
+                                    <span class="preview-name">{{ contact.name }}</span>
                                     <span class="preview-message">Ultimo messaggio inviato</span>
                                 </div>
                                 <!-- msg time -->
