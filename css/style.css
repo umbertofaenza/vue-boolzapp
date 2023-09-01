@@ -107,7 +107,7 @@ img {
 .chat-preview {
   height: 70px;
   padding: 5px;
-  border-bottom: 1px solid rgb(235, 232, 232);
+  border-bottom: 1px solid #ebe8e8;
 
   display: flex;
   align-items: center;
@@ -131,20 +131,106 @@ img {
 .active-chat {
   width: 65%;
   height: 100%;
-  border: 1px solid yellow;
 }
 
 .active-chat__header {
   height: 10%;
-  background-color: lightblue;
+  padding: 5px;
+  background-color: #eaeaea;
+  border-left: 1px solid lightgray;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.active-user-profile {
+  display: flex;
+  align-items: center;
+}
+
+.active-user-controls {
+  display: flex;
+  align-items: center;
+}
+
+.active-user-controls span {
+  color: gray;
+  padding: 5px;
+}
+
+.active-chat__header img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.active-chat__header span {
+  display: block;
+}
+
+.active-chat__header span:nth-child(2) {
+  font-size: 0.8rem;
+  color: gray;
 }
 
 .active-chat__body {
   height: 80%;
-  background-color: lightpink;
+  background-image: url(../img/chat_bg.jpg);
+  padding: 20px 40px;
 }
 
-.active-chat__input {
+.active-chat__footer {
   height: 10%;
-  background-color: lightgreen;
+  background-color: #f3eeea;
+
+  display: flex;
+  align-items: center;
+}
+
+.active-chat__footer .footer-left,
+.active-chat__footer .footer-right {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-chat__footer .footer-left i,
+.active-chat__footer .footer-right i {
+  cursor: pointer;
+  color: gray;
+}
+
+.active-chat__footer .footer-center {
+  width: 80%;
+}
+
+.message {
+  width: fit-content;
+  background-color: gray;
+  padding: 10px 50px 10px 10px;
+  font-size: 0.9rem;
+  margin: 10px 0;
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.message.sent {
+  background-color: #d5f9ba;
+  margin-left: auto;
+}
+
+.message.received {
+  background-color: #ffffff;
+}
+
+.msg-time {
+  font-size: 0.5rem;
+  color: gray;
+
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
 }
