@@ -10,6 +10,11 @@ createApp({
         message: "",
         status: "sent",
       },
+      newReply: {
+        date: "",
+        message: "ok",
+        status: "received",
+      },
     };
   },
 
@@ -22,7 +27,13 @@ createApp({
       if (this.newMessage.message.length > 0) {
         this.contacts[this.activeChatIndex].messages.push(newMessageCopy);
         this.newMessage.message = "";
+
+        setTimeout(this.autoReply, 1000);
       }
+    },
+
+    autoReply() {
+      this.contacts[this.activeChatIndex].messages.push(this.newReply);
     },
   },
 
