@@ -115,9 +115,23 @@
                         </div>
                         <!-- body -->
                         <div class="active-chat__body">
-                            <div v-for="message in contacts[activeChatIndex].messages" class="message"
+                            <div v-for="(message, index) in contacts[activeChatIndex].messages" class="message"
                                 :class="(message.status == 'sent') ? 'sent' : 'received'">
+                                <!-- message -->
                                 {{ message.message}}
+
+                                <!-- dropdown -->
+                                <div class="dropdown">
+                                    <div class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    </div>
+                                    <ul class="dropdown-menu">
+                                        <li @click="getMsgInfo(index)"><a class="dropdown-item" href="#">Message
+                                                info</a></li>
+                                        <li @click="deleteMsg(index)">
+                                            <a class="dropdown-item" href="#">Delete message</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <!-- footer-->

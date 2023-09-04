@@ -33,8 +33,16 @@ createApp({
       }
     },
 
+    deleteMsg(index) {
+      this.contacts[this.activeChatIndex].messages.splice(index, 1);
+    },
+
     autoReply() {
       this.contacts[this.activeChatIndex].messages.push(this.newReply);
+    },
+
+    getMsgInfo(index) {
+      console.log(this.contacts[this.activeChatIndex].messages[index]);
     },
   },
 
