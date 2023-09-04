@@ -64,14 +64,15 @@
                         <!-- input -->
                         <div class="chat-list__input">
                             <div class="input-group flex-nowrap">
-                                <input type="text" class="form-control" placeholder="Cerca chat">
+                                <input type="text" class="form-control" placeholder="Cerca chat" v-model="filterText">
                             </div>
                         </div>
                         <!-- chats -->
                         <div class="chat-list__chats">
                             <!-- chat preview -->
                             <div @click="activeChatIndex = index" v-for="(contact, index) in contacts"
-                                :class="(activeChatIndex == index) ? 'chat-preview clicked-chat' : 'chat-preview'">
+                                :class="(activeChatIndex == index) ? 'chat-preview clicked-chat' : 'chat-preview'"
+                                v-show="(contact.name.toLowerCase()).includes(filterText.toLowerCase())">
                                 <!-- preview img -->
                                 <div class="chat-preview__img">
                                     <img :src="contact.avatar">

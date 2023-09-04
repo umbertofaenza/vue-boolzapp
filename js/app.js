@@ -15,6 +15,7 @@ createApp({
         message: "ok",
         status: "received",
       },
+      filterText: "",
     };
   },
 
@@ -37,7 +38,5 @@ createApp({
     },
   },
 
-  created() {
-    console.log(this.contacts);
-  },
+  created() {},
 }).mount("#app");
