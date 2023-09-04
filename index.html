@@ -80,7 +80,7 @@
                                 <!-- preview text -->
                                 <div class="chat-preview__text">
                                     <span class="preview-name">{{ contact.name }}</span>
-                                    <span class="preview-message">Ultimo messaggio inviato</span>
+                                    <span class="preview-message">{{ contact.messages.at(-1).message }}</span>
                                 </div>
                                 <!-- msg time -->
                                 <span class="msg-time">12:00</span>
