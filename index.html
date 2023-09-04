@@ -113,14 +113,9 @@
                         </div>
                         <!-- body -->
                         <div class="active-chat__body">
-                            <div class="message sent">Hai portato a spasso il cane?
-                                <span class="msg-time">15:30</span>
-                            </div>
-                            <div class="message sent">Ricordati di stendere i panni!
-                                <span class="msg-time">15:50</span>
-                            </div>
-                            <div class="message received">Tutto fatto!
-                                <span class="msg-time">16:15</span>
+                            <div v-for="message in contacts[activeChatIndex].messages" class="message"
+                                :class="(message.status == 'sent') ? 'sent' : 'received'">
+                                {{ message.message}}
                             </div>
                         </div>
                         <!-- footer-->

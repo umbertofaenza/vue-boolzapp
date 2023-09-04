@@ -4,6 +4,7 @@ createApp({
   data() {
     return {
       contacts,
+      activeChatIndex: 0,
     };
   },
 
