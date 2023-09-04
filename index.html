@@ -70,7 +70,8 @@
                         <!-- chats -->
                         <div class="chat-list__chats">
                             <!-- chat preview -->
-                            <div v-for="(contact, index) in contacts" class="chat-preview">
+                            <div @click="activeChatIndex = index" v-for="(contact, index) in contacts"
+                                :class="(activeChatIndex == index) ? 'chat-preview clicked-chat' : 'chat-preview'">
                                 <!-- preview img -->
                                 <div class="chat-preview__img">
                                     <img :src="contact.avatar">
@@ -92,9 +93,9 @@
                         <div class="active-chat__header">
                             <!-- active profile -->
                             <div class="active-user-profile">
-                                <img src="./img/avatar_1.jpg">
+                                <img :src="contacts[activeChatIndex].avatar">
                                 <div class="active-user-profile__text">
-                                    <span>Michele</span>
+                                    <span>{{ contacts[activeChatIndex].name }}</span>
                                     <span>Ultimo accesso oggi alle 12:00</span>
                                 </div>
                             </div>

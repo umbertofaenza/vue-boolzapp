@@ -139,6 +139,10 @@ img {
   color: gray;
 }
 
+.clicked-chat {
+  background-color: #e4e4e4;
+}
+
 /* Active Chat */
 .active-chat {
   width: 65%;
