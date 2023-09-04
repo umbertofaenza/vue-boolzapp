@@ -106,7 +106,7 @@ img {
   height: 75%;
   background-color: #fff;
 
-  overflow: scroll;
+  overflow: auto;
 }
 
 .chat-preview {
@@ -196,6 +196,7 @@ img {
   height: 80%;
   background-image: url(../img/chat_bg.jpg);
   padding: 20px 40px;
+  overflow: auto;
 }
 
 .active-chat__footer {

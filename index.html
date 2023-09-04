@@ -128,7 +128,8 @@
                             <!-- center / msg input -->
                             <div class="footer-center">
                                 <div class="input-group flex-nowrap">
-                                    <input type="text" class="form-control" placeholder="Scrivi un messaggio">
+                                    <input @keyDown.enter="addMsg()" type="text" class="form-control"
+                                        placeholder="Scrivi un messaggio" v-model="newMessage.message">
                                 </div>
                             </div>
                             <!-- right -->
