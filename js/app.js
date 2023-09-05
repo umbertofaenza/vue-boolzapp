@@ -24,7 +24,11 @@ createApp({
 
   methods: {
     addMsg() {
-      this.contacts[this.activeChatIndex].messages.pop(this.noMessages);
+      if (
+        this.contacts[this.activeChatIndex].messages.includes(this.noMessages)
+      ) {
+        this.contacts[this.activeChatIndex].messages.splice(this.noMessages, 1);
+      }
 
       const now = DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
 
