@@ -30,8 +30,6 @@ createApp({
         this.contacts[this.activeChatIndex].messages.splice(this.noMessages, 1);
       }
 
-      const now = DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
-
       const newMessageCopy = {
         ...this.newMessage,
         date: now,
@@ -55,8 +53,6 @@ createApp({
     },
 
     autoReply() {
-      const now = DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
-
       const newReply = {
         date: now,
         message: "ok",
