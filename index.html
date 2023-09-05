@@ -104,7 +104,9 @@
                                 <img :src="contacts[activeChatIndex].avatar">
                                 <div class="active-user-profile__text">
                                     <span>{{ contacts[activeChatIndex].name }}</span>
-                                    <span>Ultimo accesso oggi alle 12:00</span>
+                                    <span>Ultimo accesso oggi alle {{
+                                        getTimeFromDate(contacts[activeChatIndex].messages.at(-1).date)
+                                        }}</span>
                                 </div>
                             </div>
                             <!-- controls -->
