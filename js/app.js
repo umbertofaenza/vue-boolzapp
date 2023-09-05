@@ -1,3 +1,6 @@
+let DateTime = luxon.DateTime;
+const now = DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
+
 const { createApp } = Vue;
 
 createApp({
@@ -10,13 +13,19 @@ createApp({
         message: "",
         status: "sent",
       },
+      noMessages: {
+        date: now,
+        message: "Tutti i messaggi sono stati cancellati",
+        status: "no-messages",
+      },
       filterText: "",
     };
   },
 
   methods: {
     addMsg() {
-      let DateTime = luxon.DateTime;
+      this.contacts[this.activeChatIndex].messages.pop(this.noMessages);
+
       const now = DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
 
       const newMessageCopy = {
@@ -33,11 +42,15 @@ createApp({
     },
 
     deleteMsg(index) {
-      this.contacts[this.activeChatIndex].messages.splice(index, 1);
+      if (this.contacts[this.activeChatIndex].messages.length > 1) {
+        this.contacts[this.activeChatIndex].messages.splice(index, 1);
+      } else {
+        this.contacts[this.activeChatIndex].messages.splice(index, 1);
+        this.contacts[this.activeChatIndex].messages.push(this.noMessages);
+      }
     },
 
     autoReply() {
-      let DateTime = luxon.DateTime;
       const now = DateTime.now().toFormat("dd/MM/yyyy HH:mm:ss");
 
       const newReply = {
@@ -54,7 +67,6 @@ createApp({
     },
 
     getTimeFromDate(date) {
-      let DateTime = luxon.DateTime;
       const convertedDate = DateTime.fromFormat(date, "dd/MM/yyyy hh:mm:ss");
 
       return convertedDate.toLocaleString(DateTime.TIME_24_SIMPLE);

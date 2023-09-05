@@ -125,7 +125,7 @@
                         <!-- body -->
                         <div class="active-chat__body">
                             <div v-for="(message, index) in contacts[activeChatIndex].messages" class="message"
-                                :class="(message.status == 'sent') ? 'sent' : 'received'">
+                                :class="(message.status)">
                                 <!-- message -->
                                 {{ message.message}}
 

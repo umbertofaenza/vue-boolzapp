@@ -251,6 +251,10 @@ img {
   background-color: #ffffff;
 }
 
+.message.no-messages {
+  background-color: #cccccc;
+}
+
 .msg-time {
   font-size: 0.7rem;
   color: gray;
